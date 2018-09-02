@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ScrollView, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image,} from 'react-native';
 
 
 export default class SingleImage extends Component {
@@ -9,7 +9,7 @@ export default class SingleImage extends Component {
 
     render() {
         return (
-            <View style={[styles.wraper]}>
+            <View style={[styles.wrapper]}>
                 <Image
                     source={this.props.source}
                     style={[styles.thumb]}
@@ -23,7 +23,7 @@ export default class SingleImage extends Component {
 }
 
 const styles = StyleSheet.create({
-    wraper: {
+    wrapper: {
         flex: 1,
         backgroundColor: '#dddddd',
         alignItems: 'center',

@@ -28,7 +28,7 @@ export default class FullscreenView extends Component {
         const { navigation } = this.props;
         const uri = navigation.getParam('uri', 'https://images.unsplash.com/photo-1535412833400-85426926b8c1?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjMyNDU2fQ&s=5f22d400e082c8197425cd22cfa94479');
         return (
-            <View style={[styles.fullScreen]}>
+            <View style={[styles.fullscreen]}>
                 <Image
                     resizeMode={'contain'}
                     source={{uri: uri}}
@@ -40,7 +40,7 @@ export default class FullscreenView extends Component {
 }
 
 const styles = StyleSheet.create({
-    fullScreen: {
+    fullscreen: {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',

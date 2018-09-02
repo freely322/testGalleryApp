@@ -32,7 +32,7 @@ export default class ImageList extends Component {
         }).then((data) => {
             let pictures = data.map((pic) => {
                 return(
-                    <TouchableOpacity key={pic.id} onPress={() => {this.props.navigation.navigate('fullScreen', {
+                    <TouchableOpacity key={pic.id} onPress={() => {this.props.navigation.navigate('fullscreen', {
                         uri: pic.urls.regular,
                         title: pic.description,
                         color: pic.color
@@ -44,7 +44,6 @@ export default class ImageList extends Component {
                     </TouchableOpacity>
                 )
             });
-            console.log(pictures);
             this.setState({pictures: pictures});
         }).catch(function (err) {
             console.log(err)
@@ -57,7 +56,7 @@ export default class ImageList extends Component {
     render() {
         let pics = this.state.pictures;
         return (
-            <ScrollView style={[styles.wraper]} refreshControl={<RefreshControl refreshing={this.state.refreshing} onRefresh={()=>this._refreshListView()}/>} >
+            <ScrollView style={[styles.wrapper]} refreshControl={<RefreshControl refreshing={this.state.refreshing} onRefresh={()=>this._refreshListView()}/>} >
                 <View style={{flex: 1}}>
                     {pics}
                 </View>
@@ -67,7 +66,7 @@ export default class ImageList extends Component {
 }
 
 const styles = StyleSheet.create({
-    wraper: {
+    wrapper: {
         flex: 1,
         flexDirection: 'column',
     },
