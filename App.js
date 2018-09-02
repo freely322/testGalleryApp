@@ -13,7 +13,7 @@ import FullscreenView from "./fullscreenView";
 
 const RootStack = createStackNavigator({
         Home: ImageList,
-        fullScreen: FullscreenView
+        fullscreen: FullscreenView
     },
     {
         initialRouteName: 'Home',
